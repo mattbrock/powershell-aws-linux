@@ -6,12 +6,12 @@ $Instance = (Get-EC2Instance -Filter @( @{name='tag:Name'; values="$InstanceName
 $InstancePublicDNS = ($Instance).Instances.publicdnsname
 
 # List of commands to run, to install and 
-# configure simple_webapp and nginx
+# configure simple-webapp and nginx
 $Commands = @(
-  'sudo curl -L -s -o /opt/simple_webapp.zip https://github.com/mattbrock/simple_webapp/archive/refs/heads/master.zip'
-  'sudo unzip /opt/simple_webapp.zip -d /opt'
-  'sudo mv -fv /opt/simple_webapp-master /opt/simple_webapp'
-  'sudo cp -fv /opt/simple_webapp/simple-webapp.service /usr/lib/systemd/system/simple-webapp.service'
+  'sudo curl -L -s -o /opt/simple-webapp.zip https://github.com/mattbrock/simple-webapp/archive/refs/heads/master.zip'
+  'sudo unzip /opt/simple-webapp.zip -d /opt'
+  'sudo mv -fv /opt/simple-webapp-master /opt/simple-webapp'
+  'sudo cp -fv /opt/simple-webapp/simple-webapp.service /usr/lib/systemd/system/simple-webapp.service'
   'sudo systemctl daemon-reload'
   'sudo systemctl enable simple-webapp'
   'sudo systemctl start simple-webapp'
