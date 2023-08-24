@@ -2,7 +2,7 @@
 
 Simple PowerShell scripts for automated provisioning of Linux EC2 instances within AWS. Running these will provision an Amazon Linux 2 EC2 instance with SSH key pair and Security Group, with a webapp deployed thereon, plus an associated DNS record in Route 53.
 
-I've written a blog article about these scripts [here](https://cetre.co.uk/blog/aws-provisioning-and-deployment-with-linux-ec2-instances-using-powershell/).
+I've written a blog article about these scripts [here](https://blog.cetre.co.uk/aws-provisioning-and-deployment-with-linux-ec2-instances-using-powershell/).
 
 ## Requirements
 
